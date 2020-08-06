@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -61,15 +60,7 @@ public class MainControllerTest
     @Test
     public void time()
     {
-        assertEquals("time",mainController.time(model));
-    }
-
-    @Test
-    public void getTime()
-    {
-        String time=Calendar.getInstance().getTime().toLocaleString();
-        when(mockController.time(model)).thenReturn(time);
-        assertEquals(time,mockController.time(model));
+        assertEquals("time",mainController.time());
     }
 
     @Test

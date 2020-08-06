@@ -1,8 +1,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Time</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script th:src="@{/js/time.js}"></script>
 </head>
-<body>
-    <h1 th:text="${time}"></h1>
+<body onload="time()">
+    <h1 id="time"></h1>
 </body>
 </html>

@@ -8,7 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -66,24 +65,12 @@ public class MainController
     /**
      * Page what outputs time.
      *
-     * @param model object of interface Model what is used to add attribute.
      * @return name of html page.
      */
     @GetMapping("/time")
-    public String time(Model model)
+    public String time()
     {
-        model.addAttribute("time",getTime());
         return "time";
-    }
-
-    /**
-     * Get time.
-     *
-     * @return time.
-     */
-    public String getTime()
-    {
-        return Calendar.getInstance().getTime().toLocaleString();
     }
 
     /**
